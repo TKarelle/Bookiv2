@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/sign.css"> <!-- Lien vers ton fichier CSS -->
+</head>
+<body>
+    <div class="body__close"><a href="index.html"><span class="close-menu" id="closeMenu">&times;</span></a></div>
+    <div class="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Créer un compte</h1>
+                <!-- Monsieur/Madame case à cocher -->
+                <div class="gender">
+                    <label><input type="radio" name="gender" value="Mr" /> Mr</label>
+                    <label><input type="radio" name="gender" value="Mme" /> Mme</label>
+                </div>
+
+                <!-- Nom et Prénoms en ligne -->
+                <div class="name-fields">
+                    <input type="text" placeholder="Nom" />
+                    <input type="text" placeholder="Prénoms" />
+                </div>
+
+                <input type="email" placeholder="Email" />
+                
+                <!-- Deux champs de mot de passe -->
+                <input type="password" id="password" placeholder="Mot de passe" />
+                <input type="password" id="confirmPassword" placeholder="Confirmer le mot de passe" />
+                <p id="error-message" style="color: red; display: none;">Les mots de passe ne correspondent pas</p>
+
+                <!-- Case pour accepter les conditions -->
+                <label class="checkbox_btn">
+                    <input type="checkbox" id="terms" /> J'accepte les conditions d'utilisation
+                </label>
+
+                <button type="submit" id="signupBtn" disabled>S'inscrire</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Connexion</h1>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Mot de passe" />
+
+                <!-- Case à cocher pour "Se souvenir de moi" -->
+                <label class="checkbox_btn">
+                    <input type="checkbox" /> Se souvenir de moi
+                </label>
+
+                <button>Se connecter</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bienvenue!</h1>
+                    <p>Veuillez vous connecter avec vos identifiants</p>
+                    <button class="ghost" id="signIn">Se connecter</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Salut!</h1>
+                    <p>Entrez vos informations pour créer un compte</p>
+                    <button class="ghost" id="signUp">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.querySelector('.container');
+        
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+        
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+
+        // Validation des mots de passe
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const errorMessage = document.getElementById('error-message');
+        const signupBtn = document.getElementById('signupBtn');
+        const terms = document.getElementById('terms');
+
+        function validatePassword() {
+            if (password.value !== confirmPassword.value) {
+                errorMessage.style.display = 'block';
+                signupBtn.disabled = true;
+            } else {
+                errorMessage.style.display = 'none';
+                signupBtn.disabled = !terms.checked;
+            }
+        }
+
+        password.addEventListener('input', validatePassword);
+        confirmPassword.addEventListener('input', validatePassword);
+
+        // Activer le bouton seulement si les conditions sont acceptées
+        terms.addEventListener('change', () => {
+            signupBtn.disabled = !terms.checked || password.value !== confirmPassword.value;
+        });
+    </script>
+    
+</body>
+</html>
