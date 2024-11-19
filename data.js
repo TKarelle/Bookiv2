@@ -152,22 +152,24 @@ fetch('data.json')
       showMoreButton.style.display = 'none'; // Masquer le bouton après affichage
     });
 
+    const topRated = hebergementData.sort((a,b) => b.rating - a.rating).slice(0,3); // Les 3 premiers hébergements avec les meilleures notes
+
     // Génération des cartes Populaires
-    data.populaires.forEach(populaire => {
+    topRated.forEach(hebergement => {
       const card = document.createElement('a');
-      card.href = `logement.html?id=${populaire.id}`;  // Redirection avec l'ID du populaire
+      card.href = `logement.html?id=${hebergement.id}`;  // Redirection avec l'ID du populaire
       card.innerHTML = `
         <article class="card">
-          <img src="${populaire.image}" alt="${populaire.name}">
+          <img src="${hebergement.image}" alt="${hebergement.name}">
           <div class="card-content">
             <div class="card-txt">
-              <h3 class="card-title">${populaire.name}</h3>
-              <p class="card-subtitle">Nuit à partir de ${populaire.price} <span class="euro">€</span></p>
+              <h3 class="card-title">${hebergement.name}</h3>
+              <p class="card-subtitle">Nuit à partir de ${hebergement.price} <span class="euro">€</span></p>
             </div>
             <div class="card-rating">
-              ${'<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>'.repeat(populaire.rating)}
-              ${'<i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>'.repeat(5 - populaire.rating)}
-              <span class="sr-only">Note de ${populaire.rating} sur 5</span>
+              ${'<i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>'.repeat(hebergement.rating)}
+              ${'<i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>'.repeat(5 - hebergement.rating)}
+              <span class="sr-only">Note de ${hebergement.rating} sur 5</span>
             </div>
           </div>
         </article>
