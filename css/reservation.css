@@ -1,0 +1,160 @@
+/****** General ***********/
+* {
+    font-family: "Raleway", sans-serif;
+}
+  
+:root {
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
+}
+  
+.fa-solid {
+    color: var(--main-color);
+}
+
+header{
+    height: 79px;
+}
+
+.logo{
+    height: 40px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.main_content{
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+
+
+
+.recap_logement {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box; /* Inclure padding et border dans la largeur */
+    margin-bottom: 20px; /* Espace entre les lignes */
+    padding: 20px; /* Espacement interne */
+}
+.right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    box-sizing: border-box; /* Inclure padding et border dans la largeur */
+    margin-bottom: 20px; /* Espace entre les lignes */
+    padding: 20px; /* Espacement interne */
+    padding-left: 70px;
+    border: 1px solid #ddd; /* Bordure pour chaque section */
+    border-radius: 30px; /* Coins arrondis */
+    z-index: 0;
+}
+
+.main_image{
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 1;
+}
+.host_image{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.host_text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #deebff;
+}
+.text{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text p{
+    font-size: 14px;
+}
+.date{
+    display: flex;
+    gap: 10px;
+}
+
+h1, h2 {
+    margin: 0 0 10px; /* Marge inférieure pour les titres */
+    font-size: 18px;
+}
+
+
+input {
+    width: 90%; /* Champs prennent toute la largeur de leur conteneur */
+    padding: 10px; /* Espacement interne pour les champs */
+    margin-bottom: 10px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 4px; /* Coins arrondis pour les champs */
+}
+
+button {
+    background-color: #0065fc; /* Couleur de fond */
+    width: 150px;
+    margin-left: 25%;
+    color: white; /* Couleur du texte */
+    padding: 10px 15px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Changer le curseur au survol */
+    
+}
+
+button:hover {
+    background-color: #0065fc; /* Couleur au survol */
+}
+
+.recap_price{
+    background-color: #deebff;
+    border-radius: 30px;
+    text-align: left;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.recap_date{
+    margin-bottom: 20px;
+}
+
+
+
