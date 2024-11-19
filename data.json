@@ -1,0 +1,490 @@
+{
+  "hebergements": [
+    {
+      "id":1,
+        "name": "Hôtel du port",
+        "city": "Marseille",
+        "price": 52,
+        "clean": 5,
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/fred-kleber.jpg",
+        "link": "hotel-du-port.html",
+        "type": "Romantique",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Super séjour, personnel accueillant."
+          },
+          {
+            "rating": 4,
+            "comment": "Très bon rapport qualité/prix."
+          }
+        ],
+        "host": {
+          "name": "Jean Dupont",
+          "experience": "2 ans",
+          "description": "L'Hôtel du Port est un véritable havre de paix, situé à seulement quelques pas de la plage. Avec son ambiance chaleureuse et accueillante, cet établissement vous invite à la détente et à la sérénité. Chaque chambre est soigneusement décorée et équipée pour offrir un confort optimal, vous garantissant un séjour relaxant. Profitez d'un café le matin sur votre balcon, tout en admirant la vue imprenable sur la mer. Les clients peuvent également se relaxer dans le jardin luxuriant ou au bord de la piscine. Pour les amateurs de gastronomie, le restaurant de l'hôtel propose des plats locaux préparés avec des ingrédients frais. Le personnel, attentif et souriant, est à votre disposition pour répondre à tous vos besoins. Que vous soyez en famille, en couple ou entre amis, l'Hôtel du Port saura vous séduire par son charme et sa convivialité. Venez vivre une expérience inoubliable au bord de la mer !",
+          "image": "images/hote/1.png"
+          
+        },
+        "images": [
+          "images/hebergements/fred-kleber.jpg",
+          "images/hebergements/fred-kleber.jpg",
+          "images/hebergements/fred-kleber.jpg",
+          "images/hebergements/fred-kleber.jpg",
+          "images/hebergements/fred-kleber.jpg"
+        ]
+    },
+    {
+      "id":2,
+        "name": "Hôtel Chez Amina",
+        "city": "Lyon",
+        "price": 96,
+        "currency": "€",
+        "rating": 2,
+        "image": "images/hebergements/febrian-zakaria.jpg",
+        "link": "#",
+        "type": "Familiale",
+        "features": {
+          "capacity": 4,
+          "rooms": 2,
+          "beds": 2,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Charmant et bien situé."
+          }
+        ],
+        "host": {
+          "name": "Amina",
+          "experience": "5 ans",
+          "description": "Niché en plein cœur de Lyon, cet hôtel traditionnel incarne l'élégance et le charme du patrimoine français. Avec un service exceptionnel, l'équipe dévouée s'assure que chaque séjour soit mémorable, répondant à toutes vos attentes avec soin et professionnalisme. Les chambres, décorées avec goût, allient confort moderne et touches historiques, créant une atmosphère chaleureuse et accueillante. Vous pourrez déguster un petit-déjeuner copieux dans la salle à manger au décor raffiné, mettant en avant des spécialités locales. Sa situation centrale vous permet d'explorer facilement les attractions emblématiques de la ville, telles que la basilique de Notre-Dame de Fourvière et le Vieux Lyon. Profitez de l’ambiance animée des rues environnantes tout en savourant la tranquillité de votre refuge. L’hôtel offre également des espaces communs confortables pour se détendre après une journée de visites. Que vous soyez en voyage d'affaires ou en escapade romantique, cet hôtel traditionnel à Lyon saura vous séduire par son charme intemporel et son service irréprochable.",
+          "image": "images/hote/2.png"
+        },
+        "images": [
+          "images/hebergements/febrian-zakaria.jpg",
+          "images/hebergements/febrian-zakaria.jpg",
+          "images/hebergements/febrian-zakaria.jpg",
+          "images/hebergements/febrian-zakaria.jpg",
+          "images/hebergements/febrian-zakaria.jpg"
+        ]
+    },
+    {
+      "id":3,
+        "name": "Hôtel Les mouettes",
+        "city": "Basque",
+        "price": 76,
+        "currency": "€",
+        "rating": 4.6,
+        "image": "images/hebergements/reisetopia.jpg",
+        "link": "#",
+        "type": ["Romantique", "Pepites"],
+        "features": {
+          "capacity": 3,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Vues incroyables, très relaxant."
+          }
+        ],
+        "host": {
+          "name": "Michel",
+          "experience": "3 ans",
+          "description": "Idéalement situé sur la côte basque, cet hôtel moderne offre une vue imprenable sur l'océan Atlantique. Les chambres élégantes et contemporaines sont équipées de balcons privés, parfaits pour admirer les magnifiques couchers de soleil. L'intérieur de l'hôtel allie design raffiné et confort, créant une atmosphère apaisante pour les voyageurs. Profitez d'une piscine à débordement offrant une vue panoramique sur la mer, idéale pour se détendre après une journée d'exploration. Le restaurant sur place propose une cuisine locale délicieuse, mettant en avant des produits frais de la région. Situé à proximité des plages et des célèbres spots de surf, l'hôtel est un point de départ idéal pour les amateurs de sports nautiques. Un centre de bien-être est également disponible pour vous ressourcer avec des soins relaxants. Les espaces communs, lumineux et spacieux, invitent à la convivialité. Que vous soyez en escapade romantique ou en vacances en famille, cet hôtel moderne à Biarritz saura combler toutes vos attentes..",
+          "image": "images/hote/3.png"
+        },
+        "images": [
+          "images/hebergements/reisetopia.jpg",
+          "images/hebergements/reisetopia.jpg",
+          "images/hebergements/reisetopia.jpg",
+          "images/hebergements/reisetopia.jpg",
+          "images/hebergements/reisetopia.jpg"
+        ]
+      },
+      {
+        "id":4,
+        "name": "Hôtel de la mer",
+        "city": "Bretagne",
+        "price": 46,
+        "currency": "€",
+        "rating": 3,
+        "image": "images/hebergements/annie-spratt.jpg",
+        "link": "#",
+        "type": "Romantique",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Idéal pour un week-end tranquille."
+          }
+        ],
+        "host": {
+          "name": "Sophie",
+          "experience": "4 ans",
+          "description": "Niché au bord de la mer, cet hôtel paisible en Bretagne vous invite à la détente et à l’évasion. Avec ses chambres confortables offrant des vues imprenables sur l’océan, vous pourrez savourer chaque instant de votre séjour. L’atmosphère sereine de l’établissement est accentuée par le doux bruit des vagues et le chant des oiseaux marins. Profitez d’un petit-déjeuner copieux à base de produits locaux sur la terrasse ensoleillée, tout en admirant le panorama. Les sentiers côtiers à proximité sont parfaits pour des balades revitalisantes au cœur de la nature bretonne. Le jardin de l'hôtel, fleuri et ombragé, constitue un havre de paix où vous pourrez lire ou simplement vous reposer. Un accès direct à la plage vous permettra de profiter des joies de la mer, que ce soit pour nager ou vous prélasser au soleil. Les équipes dévouées vous offriront un service attentionné, veillant à ce que votre séjour soit inoubliable. Que vous souhaitiez explorer la région ou simplement vous relaxer, cet hôtel paisible est l'endroit idéal pour recharger vos batteries en Bretagne..",
+          "image": "images/hote/4.png"
+        },
+        "images": [
+          "images/hebergements/annie-spratt.jpg",
+          "images/hebergements/annie-spratt.jpg",
+          "images/hebergements/annie-spratt.jpg",
+          "images/hebergements/annie-spratt.jpg",
+          "images/hebergements/annie-spratt.jpg"
+        ]
+      },
+      {
+        "id":5,
+        "name": "Auberge La canebière",
+        "city" : "Toulouse",
+        "price": 25,
+        "currency": "€",
+        "rating": 5,
+        "image": "images/hebergements/marcus-loke.jpg",
+        "link": "#",
+        "type": ["Economique", "Pepites"],
+        "features": {
+          "capacity": 6,
+          "rooms": 3,
+          "beds": 3,
+          "bathrooms": 2
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Très bon endroit pour les familles."
+          }
+        ],
+        "host": {
+          "name": "Lucie",
+          "experience": "1 an",
+          "description": "Idéalement située au cœur de Toulouse, cette auberge conviviale est le choix parfait pour les voyageurs en quête d’un bon rapport qualité/prix. L’atmosphère chaleureuse et accueillante vous fera vous sentir comme chez vous dès votre arrivée. Les chambres, bien équipées et confortables, offrent un espace propice à la détente après une journée d'exploration. Le petit-déjeuner, servi chaque matin, est copieux et composé de produits locaux, parfait pour bien commencer la journée. La salle commune est un lieu de rencontre idéal pour échanger avec d'autres voyageurs et partager vos expériences. L’équipe, sympathique et dynamique, est toujours prête à vous donner des conseils sur les meilleures adresses et activités à Toulouse. Profitez également des nombreux restaurants et bars à proximité, offrant une délicieuse cuisine locale. Avec un accès facile aux transports en commun, vous pourrez facilement découvrir la ville rose et ses magnifiques monuments. Que ce soit pour un court séjour ou un long week-end, cette auberge est le point de départ idéal pour votre aventure toulousaine.",
+          "image": "images/hote/5.png"
+        },
+        "images": [
+          "images/hebergements/marcus-loke.jpg",
+          "images/hebergements/marcus-loke.jpg",
+          "images/hebergements/marcus-loke.jpg",
+          "images/hebergements/marcus-loke.jpg",
+          "images/hebergements/marcus-loke.jpg"
+        ]
+      },
+      {
+        "id":6,
+        "name": "Auberge le panier",
+        "city" : "Paris",
+        "price": 23,
+        "currency": "€",
+        "rating": 3,
+        "image": "images/hebergements/nicate-lee.jpg",
+        "link": "#",
+        "type":"Economique",
+        "features": {
+          "capacity": 4,
+          "rooms": 2,
+          "beds": 2,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Parfait pour un court séjour."
+          }
+        ],
+        "host": {
+          "name": "Marc",
+          "experience": "2 ans",
+          "description": "Nichée dans un quartier animé de Paris, cette auberge abordable est le refuge idéal pour les voyageurs à la recherche d’un bon rapport qualité/prix. Son ambiance chaleureuse et conviviale vous invite à vous sentir instantanément chez vous. Les chambres, simples mais confortables, sont parfaites pour se reposer après une journée d'exploration dans la capitale. Chaque matin, un petit-déjeuner continental est servi, vous offrant l'énergie nécessaire pour découvrir les merveilles de la ville. Les espaces communs, comme la salle de séjour et la cuisine partagée, encouragent les échanges entre voyageurs, rendant votre séjour encore plus enrichissant. L'équipe, disponible et accueillante, se tient à votre disposition pour vous donner des conseils sur les meilleures visites et les secrets bien gardés de Paris. Grâce à sa proximité avec les transports en commun, vous pourrez facilement accéder aux principaux sites touristiques, tels que la Tour Eiffel et le Louvre. Que vous soyez en solo, en couple, ou entre amis, cette auberge est le point de départ parfait pour vivre une expérience parisienne inoubliable.",
+          "image": "images/hote/6.png"
+        },
+        "images": [
+          "images/hebergements/nicate-lee.jpg",
+          "images/hebergements/nicate-lee.jpg",
+          "images/hebergements/nicate-lee.jpg",
+          "images/hebergements/nicate-lee.jpg",
+          "images/hebergements/nicate-lee.jpg"
+        ]
+    },
+    {
+      "id":7,
+        "name": "Hôtel Le soleil du matin",
+        "price": 128,
+        "city" : "Marseille",
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/emile-guillemot.jpg",
+        "link": "#",
+        "type": "Romantique",
+        "description": "Un hôtel luxueux avec un service 5 étoiles.",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Incroyable ! Je reviendrai."
+          }
+        ],
+        "host": {
+          "name": "Isabelle",
+          "experience": "6 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg"
+        ]
+      },
+      {
+        "id":8,
+        "name": "Chambres d’hôtes Au cœur de l’eau",
+        "price": 71,
+        "city" : "Bretagne",
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/aw-creative.jpg",
+        "link": "#",
+        "type" :"Romantique",
+        "description": "Des chambres d’hôtes au bord de l'eau avec une vue imprenable.",
+        "features": {
+          "capacity": 3,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Un séjour relaxant."
+          }
+        ],
+        "host": {
+          "name": "Paul",
+          "experience": "2 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg"
+        ]
+      },
+      {
+        "id":9,
+        "name": "Hôtel Bleu et Blanc",
+        "price": 68,
+        "city" : "Paris",
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/febrian-zakaria2.jpg",
+        "link": "#",
+        "type": "Romantique",
+        "description": "Un hôtel moderne avec un décor chic.",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Superbe ! J'ai adoré."
+          }
+        ],
+        "host": {
+          "name": "Julien",
+          "experience": "4 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg"
+        ]
+    }
+    
+  ],
+  "populaires": [
+    {
+      "id":7,
+        "name": "Hôtel Le soleil du matin",
+        "price": 128,
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/emile-guillemot.jpg",
+        "link": "#",
+        "description": "Un hôtel luxueux avec un service 5 étoiles.",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Incroyable ! Je reviendrai."
+          }
+        ],
+        "host": {
+          "name": "Isabelle",
+          "experience": "6 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg",
+          "images/hebergements/emile-guillemot.jpg"
+        ]
+      },
+      {
+        "id":8,
+        "name": "Chambres d’hôtes Au cœur de l’eau",
+        "price": 71,
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/aw-creative.jpg",
+        "link": "#",
+        "description": "Des chambres d’hôtes au bord de l'eau avec une vue imprenable.",
+        "features": {
+          "capacity": 3,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Un séjour relaxant."
+          }
+        ],
+        "host": {
+          "name": "Paul",
+          "experience": "2 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg",
+          "images/hebergements/aw-creative.jpg"
+        ]
+      },
+      {
+        "id":9,
+        "name": "Hôtel Bleu et Blanc",
+        "price": 68,
+        "currency": "€",
+        "rating": 4,
+        "image": "images/hebergements/febrian-zakaria2.jpg",
+        "link": "#",
+        "description": "Un hôtel moderne avec un décor chic.",
+        "features": {
+          "capacity": 2,
+          "rooms": 1,
+          "beds": 1,
+          "bathrooms": 1
+        },
+        "reviews": [
+          {
+            "rating": 5,
+            "comment": "Superbe ! J'ai adoré."
+          }
+        ],
+        "host": {
+          "name": "Julien",
+          "experience": "4 ans",
+          "image": "images/hebergements/hote.jpg"
+        },
+        "images": [
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg",
+          "images/hebergements/febrian-zakaria2.jpg"
+        ]
+    }
+  ],
+  "activites": [
+    {
+      "id": 1,
+      "price": 128,
+      "name": "Vieux-port",
+      "url": "vieux-port.html",
+      "image": "images/activites/reno-laithienne.jpg",
+      "alt": "Vieux-port",
+      "city": "Marseille, France",
+      "rating": 5,
+      "description": "Le Vieux-Port de Marseille est le cœur battant de la ville depuis l'Antiquité. Ce port emblématique, entouré de restaurants et de cafés, est un lieu de rencontre et d’échanges culturels. Les pêcheurs y vendent leurs prises chaque matin, créant une ambiance authentique. On peut y admirer des bateaux de plaisance ainsi que des voiliers anciens, rappelant le riche passé maritime de Marseille. La vue sur la basilique Notre-Dame-de-la-Garde depuis le port est spectaculaire. C’est aussi un point de départ idéal pour visiter les îles du Frioul et le château d'If. Le Vieux-Port incarne à merveille l’esprit méditerranéen de la ville, alliant tradition et modernité. La promenade le long des quais est incontournable pour tout visiteur souhaitant découvrir l'âme de Marseille."
+    },
+    {
+      "id": 2,
+      "price": 128,
+      "name": "Fort de Pomégues",
+      "url": "fort-de-pomegues.html",
+      "image": "images/activites/paul-hermann.jpg",
+      "alt": "Fort de Pomégues",
+      "city": "Îles du Frioul, Marseille",
+      "rating": 4,
+      "description": "Situé sur l'île de Pomégues, le fort de Pomégues est un site historique construit pour protéger la rade de Marseille. Édifié au XVIIe siècle, ce fort offre une vue imprenable sur la Méditerranée et la côte. Aujourd'hui, il se fond dans le paysage sauvage et préservé de l'île, un cadre idéal pour les randonnées et la découverte de la faune locale. Les amateurs d’histoire apprécieront les vestiges du fort, témoins des défenses maritimes de la région. Accessible en bateau depuis le Vieux-Port, une visite permet de s’immerger dans un environnement naturel exceptionnel, loin de l’agitation urbaine. Les falaises escarpées et la flore méditerranéenne ajoutent au charme de ce lieu paisible, offrant un voyage dans le temps et la nature."
+    },
+    {
+      "id": 3,
+      "price": 128,
+      "name": "Parc national des Calanques",
+      "url": "parc-national-des-calanques.html",
+      "image": "images/activites/kilyan-sockalingum.jpg",
+      "alt": "Parc national des Calanques",
+      "city": "Marseille, Cassis, et La Ciotat, France",
+      "rating": 5,
+      "description": "Le Parc national des Calanques est une réserve naturelle spectaculaire qui s'étend de Marseille à Cassis. Avec ses falaises calcaires blanches plongeant dans les eaux turquoise, il est un paradis pour les amateurs de nature et d’aventure. Les randonneurs peuvent emprunter des sentiers sinueux offrant des panoramas à couper le souffle. Le parc abrite une biodiversité riche, avec de nombreuses espèces endémiques de plantes et d’animaux. C'est également un site prisé pour l'escalade, le kayak, et la plongée sous-marine. La beauté brute et sauvage des calanques attire des visiteurs du monde entier. Chaque calanque, comme celles d’En-Vau et de Sugiton, possède son propre caractère, offrant un mélange unique de mer et de montagne. La préservation de cet écosystème fragile en fait un lieu précieux et exceptionnel."
+    },
+    {
+      "id": 4,
+      "price": 128,
+      "name": "Notre-Dame-de-la-Garde",
+      "url": "notre-dame-de-la-garde.html",
+      "image": "images/activites/florian-wehde.jpg",
+      "alt": "Notre-Dame-de-la-Garde",
+      "city": "Marseille, France",
+      "rating": 5,
+      "description": "Perchée au sommet de la colline de la Garde, Notre-Dame-de-la-Garde est la 'Bonne Mère' veillant sur Marseille et ses habitants. Construite au XIXe siècle, cette basilique de style romano-byzantin est l'un des sites les plus visités de la ville. L’intérieur richement décoré avec des mosaïques et des ex-voto marins témoigne de la dévotion des Marseillais. La vue panoramique depuis la basilique est à couper le souffle, embrassant toute la ville et la mer Méditerranée jusqu’aux îles du Frioul. Notre-Dame-de-la-Garde est un lieu de pèlerinage, un symbole de protection pour les marins et les voyageurs. C’est aussi un lieu d’histoire et de culture, où se mêlent foi, patrimoine et paysage exceptionnel. La montée jusqu’à la basilique vaut l’effort pour découvrir cette icône incontournable de Marseille."
+    }
+  ]
+  
+  
+}
+
+
+
