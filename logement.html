@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Meta, title, and fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f2991717e.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="main-container">
+      <header>
+        <div class="header-container">
+          <a href="index.html"><img class="logo" src="images/logo/Booki.png" alt="logo"></a>
+          <nav class="navbar">
+            <a class="navbar_lien" href="index.html#hebergementmarseille">Hébergements</a>
+            <a class="navbar_lien" href="index.html#activités">Activités</a>
+            <div class="user-menu-container">
+              <div class="user-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="user-menu" id="userMenu">
+                <ul>
+                  <li><a href="sign.html">Inscription</a></li>
+                  <li><a href="sign.html">Connexion</a></li>
+                  <li><a href="#">Mettre mon logement sur Booki</a></li>
+                  <li><a href="#">Centre d'aide</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="accommodation-picture">
+          <h1 id="hotel-name"></h1>
+          <div class="picture">
+            <div class="main_picture">
+                <img id="main_picture" src="" alt="Image principale" />
+            </div>
+            <div class="other_picture-second">
+                <div class="other_picture">
+                  <img id="other_picture" src="" alt="Autre image" />
+                  <img id="other_picture1" src="" alt="Autre image" />
+                  <img id="other_picture2" src="" alt="Autre image" />
+                  <img id="other_picture3" src="" alt="Autre image" />
+                </div>
+            </div>
+        </div>
+        
+        </section>
+
+        <div class="details-section accommodation-details">
+          <section class="details">
+            <div class="accommodation_text">
+                <h3 id="hotel-name"></h3>
+                <p class="voyageur_text" id="hotel-capacity"></p>
+                <div class="text_reviews" id="hotel-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <p id="rating-value"></p>
+                  <a href="#" class="reviews">Commentaires</a>
+                </div>
+              </div>
+              <div class="hote" id="host-info">
+                <img id="host-image" src="" alt="Profil de l'hôte">
+                <div class="hote_Nom">
+                  <h4 id="host-name">Hôte : </h4>
+                  
+                  <p class="hote_p" id="host-experience">Hôte depuis </p>
+                </div>
+              </div>
+              <div class="hote_text" id="host-description">
+                <p></p>
+              </div>
+          </section>
+
+          <section class="reservation">
+            <div class="reservation_text">
+              <h3>Réserver maintenant</h3>
+              <div class="reservation_text-prix">
+                <h3 id="reservation_price"></h3>
+                <p>par nuit</p>
+              </div>
+              <form action="#" method="POST" class="reservation_tableau">
+                <div class="reservation_tableau-date">
+                  <div class="reservation_date">
+                    <label for="date-arrivee" class="sr-only">Arrivée</label>
+                    <input type="date" name="date-arrivee" id="date-arrivee" placeholder="Arrivée" required>
+                  </div>
+                  <div class="reservation_date">
+                    <label for="date-depart" class="sr-only">Départ</label>
+                    <input type="date" name="date-depart" id="date-depart" placeholder="Départ" required>
+                  </div>
+                </div>
+                <div class="reservation_voyageur">
+                  <label for="personnes" class="sr-only">Voyageurs</label>
+                  <input type="text" id="personnes" placeholder="Voyageurs" readonly onclick="togglePassengerSelection()">
+                  <div class="passenger-selection-2" id="passengerSelection">
+                    <div class="passenger-type">
+                      <p><strong>Adultes</strong><br>13 ans et plus</p>
+                      <button type="button" onclick="updateCount('adultes', -1)">-</button>
+                      <input type="number" id="adultes" value="0" min="0" disabled>
+                      <button type="button" onclick="updateCount('adultes', 1)">+</button>
+                    </div>
+                    <div class="passenger-type">
+                      <p><strong>Enfants</strong><br>4 à 12 ans</p>
+                      <button type="button" onclick="updateCount('enfants', -1)">-</button>
+                      <input type="number" id="enfants" value="0" min="0" disabled>
+                      <button type="button" onclick="updateCount('enfants', 1)">+</button>
+                    </div>
+                    <div class="passenger-type">
+                      <p><strong>Bébés</strong><br>0 à 3 ans</p>
+                      <button type="button" onclick="updateCount('bebes', -1)">-</button>
+                      <input type="number" id="bebes" value="0" min="0" disabled>
+                      <button type="button" onclick="updateCount('bebes', 1)">+</button>
+                    </div>
+                    <button type="button" onclick="confirmSelection()" class="confirm-button">
+                      <i class="fa-solid fa-check"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="reservation_btn"><button type="button" onclick="goToReservationPage(reservationId)">Réserver</button></div>
+              </form>
+              <p>Aucun montant ne vous sera débité pour le moment</p>
+              <div class="reservation_tax">
+                <div class="reservation_tax">
+                  <div class="reservation_tax_text">
+                    <div class="tax_text">
+                      <p>Nombre de nuits :</p>
+                      <span id="numberOfNights"></span>
+                    </div> 
+                    <div class="tax_text">
+                      <p>Taxe :</p>
+                      <span id="taxAmount"></span>
+                    </div>
+                    <div class="tax_text">
+                      <p>Montant total :</p>
+                       <span id="totalPrice"></span>
+                    </div> 
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <div class="divfooter">
+          <h4 class="title">À propos</h4>
+          <ul>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales </a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="divfooter">
+          <h4 class="title">Nos hébergements</h4>
+          <ul>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Proposer votre hôtel</a></li>
+          </ul>
+        </div>
+        <div class="divfooter">
+          <h4 class="title">Assistance</h4>
+          <ul>
+            <li><a href="#">Centre d’aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // Toggle Menu, Passenger Selection, Fetch Logic
+      function toggleMenu() {
+        const userMenu = document.getElementById('userMenu');
+        userMenu.classList.toggle('active');
+      }
+
+      window.addEventListener('click', (event) => {
+        const userMenu = document.getElementById('userMenu');
+        const userIcon = document.querySelector('.user-icon');
+        if (!userMenu.contains(event.target) && !userIcon.contains(event.target)) {
+          userMenu.classList.remove('active');
+        }
+      });
+
+      // Flatpickr Configuration
+      flatpickr("#date-arrivee", { dateFormat: "Y-m-d", allowInput: true });
+      flatpickr("#date-depart", { dateFormat: "Y-m-d", allowInput: true });
+
+      // Fetch and display logement data
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          const logementId = new URLSearchParams(window.location.search).get('id');
+          if (logementId) {
+            const logement = data.hebergements.find(h => h.id == logementId);
+            if (logement) displayLogement(logement);
+          }
+        })
+        .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));
+
+        function updateCount(type, change) {
+            const input = document.getElementById(type);
+            let currentCount = parseInt(input.value, 10);
+            currentCount = Math.max(0, currentCount + change);
+            input.value = currentCount;
+        }
+
+        function togglePassengerSelection() {
+            const selectionDiv = document.getElementById("passengerSelection");
+            selectionDiv.style.display = (selectionDiv.style.display === "block") ? "none" : "block";
+        }
+
+        function confirmSelection() {
+            const adultCount = parseInt(document.getElementById('adultes').value, 10);
+            const childCount = parseInt(document.getElementById('enfants').value, 10);
+            const babyCount = parseInt(document.getElementById('bebes').value, 10);
+            const totalCount = adultCount + childCount + babyCount;
+
+            document.getElementById("personnes").value = totalCount > 0 ? `${totalCount} Voyageurs` : "Nombre de personnes";
+
+     // Masquer la sélection après confirmation
+            document.getElementById("passengerSelection").style.display = "none";
+        }
+    </script> 
+    <script>
+      // Fonction pour récupérer les paramètres de l'URL
+      function getQueryParameter(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+      }
+  
+      // Variable pour stocker le prix de réservation
+      let reservationPrice = 0;
+  
+      // Fonction pour afficher les détails du logement
+      function displayLogement(hebergements) {
+          // Sélectionner les éléments HTML pour y insérer les informations du logement
+          const mainPictureElement = document.getElementById('main_picture');
+          const descriptionElement = document.getElementById('hotel-name');
+          const capacityElement = document.getElementById('hotel-capacity');
+          const ratingElement = document.getElementById('rating-value');
+          const hostImageElement = document.getElementById('host-image');
+          const hostNameElement = document.getElementById('host-name');
+          const hostExperienceElement = document.getElementById('host-experience');
+          const hostDescriptionElement = document.getElementById('host-description');
+          const otherPicturesElement = document.getElementById('other_picture');
+          const otherPictures1Element = document.getElementById('other_picture1');
+          const otherPictures2Element = document.getElementById('other_picture2');
+          const otherPictures3Element = document.getElementById('other_picture3');
+          const reservationPriceElement = document.getElementById('reservation_price');
+  
+          // Remplir les éléments avec les données du logement
+          descriptionElement.textContent = hebergements.name || 'Aucune description disponible';
+          capacityElement.textContent = ` ${hebergements.features.capacity} voyageurs, ${hebergements.features.rooms} chambres, ${hebergements.features.beds} lits, ${hebergements.features.bathrooms} salle de bain`;
+          ratingElement.textContent = hebergements.rating || 'Pas de note disponible';
+          reservationPrice = hebergements.price; // Assigne le prix de réservation à la variable
+          reservationPriceElement.textContent = `${reservationPrice} ${hebergements.currency}`;
+  
+          // Infos de l'hôte
+          hostImageElement.src = hebergements.host.image || 'default-host-image.jpg';  // Image par défaut si non disponible
+          hostNameElement.textContent = `Hôte : ${hebergements.host.name}`;
+          hostExperienceElement.textContent = `Hôte depuis ${hebergements.host.experience}`;
+          hostDescriptionElement.textContent = hebergements.host.description || 'Aucune description disponible';
+  
+          // Gérer les images
+          if (Array.isArray(hebergements.images) && hebergements.images.length > 0) {
+              mainPictureElement.src = hebergements.images[0]; // Utilise la première image pour l'image principale
+              otherPicturesElement.src = hebergements.images[1] || ''; // Utilise la deuxième image, si disponible
+              otherPictures1Element.src = hebergements.images[2] || '';
+              otherPictures2Element.src = hebergements.images[3] || '';
+              otherPictures3Element.src = hebergements.images[4] || '';
+          } else {
+              mainPictureElement.src = ''; // Ou une image par défaut
+              otherPicturesElement.src = ''; // Ou une image par défaut
+          }
+      }
+  
+      document.addEventListener('DOMContentLoaded', function () {
+          const arriveeInput = document.getElementById('date-arrivee');
+          const departInput = document.getElementById('date-depart');
+          const totalPriceElement = document.getElementById('totalPrice');
+          const numberOfNightsElement = document.getElementById('numberOfNights');
+          const taxElement = document.getElementById('taxAmount');
+          const taxRate = 0.10; // Taux de taxe de 10%
+  
+          // Met à jour les prix lorsque les dates changent
+          function updateReservationDetails() {
+              // Récupère les valeurs des dates au format ISO
+              const arriveeDateValue = arriveeInput.value;
+              const departDateValue = departInput.value;
+  
+              if (!arriveeDateValue || !departDateValue) {
+                  console.log("Une ou les deux dates sont manquantes.");
+                  return;
+              }
+              // Crée les objets Date
+              const arriveeDate = new Date(arriveeDateValue);
+              const departDate = new Date(departDateValue);
+  
+              // Vérifie si les dates sont valides
+              if (isNaN(arriveeDate) || isNaN(departDate)) {
+                  console.log("Date(s) invalide(s) : ", arriveeDateValue, departDateValue);
+                  return;
+              }
+  
+              // Calculer le nombre de nuits
+              const timeDifference = departDate - arriveeDate;
+              const numberOfNights = timeDifference / (1000 * 3600 * 24); // Conversion de millisecondes à jours
+  
+              if (numberOfNights > 0) {
+                  // Calculer le prix total et les taxes
+                  const totalPrice = numberOfNights * reservationPrice; // Utiliser reservationPrice
+                  const taxAmount = totalPrice * taxRate;
+  
+                  // Mettre à jour les éléments avec les nouveaux montants
+                  numberOfNightsElement.textContent = `${numberOfNights} nuit${numberOfNights > 1 ? 's' : ''}`; // Affiche le nombre de nuits
+                  totalPriceElement.textContent = `${totalPrice.toFixed(2)}€`; // Affiche le prix total
+                  taxElement.textContent = `${taxAmount.toFixed(2)}€`; // Affiche le montant des taxes
+              } else {
+                  // Si les dates ne sont pas valides
+                  console.log("Dates invalides ou inversion des dates.");
+                  numberOfNightsElement.textContent = `0 nuit`;
+                  totalPriceElement.textContent = `0€`;
+                  taxElement.textContent = `0€`;
+              }
+          }
+  
+          // Écoute les événements de changement sur les champs de date
+          arriveeInput.addEventListener('input', updateReservationDetails);
+          departInput.addEventListener('input', updateReservationDetails);
+      });
+  
+      // Fonction pour rediriger vers la page de réservation avec l'ID du logement
+      function goToReservationPage(reservationId) {
+          // Récupérer les valeurs des champs de date
+          const arrivalDate = document.getElementById('date-arrivee').value;
+          const departureDate = document.getElementById('date-depart').value;
+  
+          // Récupérer les valeurs des voyageurs
+          const adults = parseInt(document.getElementById('adultes').value, 10);
+          const children = parseInt(document.getElementById('enfants').value, 10);
+          const infants = parseInt(document.getElementById('bebes').value, 10);
+          const totalTravelers = adults + children + infants;
+
+          //Récupérer la valeurs du prix
+          const finalPrice = document.getElementById('totalPrice').textContent;
+          const tax = document.getElementById('taxAmount').textContent;
+          // Récupérer uniquement le nombre de nuits en tant que nombre
+          const nights = parseInt(document.getElementById('numberOfNights').textContent, 10);
+
+  
+          // Vérifier si les champs de date et le nombre de voyageurs sont remplis
+          if (!arrivalDate || !departureDate || totalTravelers === 0) {
+              alert("Veuillez remplir les dates d'arrivée, de départ, et sélectionner au moins un voyageur.");
+              return; // Arrête la fonction si les champs ne sont pas remplis
+          }
+  
+          if (reservationId) {
+              // Redirige vers la page de réservation avec les informations nécessaires en paramètres
+              window.location.href = `reservation.html?id=${reservationId}&arrivee=${arrivalDate}&depart=${departureDate}&voyageurs=${totalTravelers}&prix=${finalPrice}&night=${nights}&tax=${tax}`;
+          } else {
+              alert("Identifiant de logement introuvable.");
+          }
+      }
+  
+      // Exemple d'insertion d'un ID spécifique
+      const reservationId = new URLSearchParams(window.location.search).get('id');
+  
+      // Fonction pour mettre à jour le nombre de voyageurs
+      function updateCount(id, delta) {
+          const input = document.getElementById(id);
+          let value = parseInt(input.value, 10) + delta;
+          if (value < 0) value = 0; // Ne pas permettre de valeur négative
+          input.value = value;
+      }
+  
+      // Fonction pour confirmer la sélection de voyageurs et fermer le sélecteur
+      function confirmSelection() {
+          const adults = parseInt(document.getElementById('adultes').value, 10);
+          const children = parseInt(document.getElementById('enfants').value, 10);
+          const infants = parseInt(document.getElementById('bebes').value, 10);
+          const totalTravelers = adults + children + infants;
+          document.getElementById('personnes').value = `${totalTravelers} Voyageur${totalTravelers > 1 ? 's' : ''}`;
+          document.getElementById('passengerSelection').style.display = 'none'; // Fermer la sélection
+      }
+  
+      // Fonction pour afficher ou masquer la sélection de voyageurs
+      function togglePassengerSelection() {
+          const selection = document.getElementById('passengerSelection');
+          selection.style.display = selection.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
+    <script src="data.js"></script>
+  </body>
+</html>
+
