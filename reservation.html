@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation d'Activité</title>
+ <!-- Lien vers votre fichier CSS si nécessaire -->
+    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" ><img class="logo" src="images/logo/Booki.png" alt="logo"></a>
+    </header>
+    <main>
+        <div class="main_content">
+            <div class="recap_logement">
+                <img class="main_image" id="image" alt="Image de l'activité" />
+                <div class="host_text"> 
+                    <h2 id="name"></h2>
+                    <div class="text">
+                        <img class="host_image" id="host-image">
+                        <div class="host_content">
+                            <p id="host-name"></p>
+                            <p id="host-experience" ></p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="right">
+                <h1>Réservation</h1>
+                <div class="recap">
+                    <div class="recap_date">
+                        <div class="date">
+                            <p id="arrival-date"></p>
+                            <p id="departure-date"></p>
+                        </div>
+                        <p id="total-travelers"></p>
+                    </div>
+                    <div class="recap_price">
+                        <h2>Détails du prix</h2>
+                        <div class="tax_text">
+                            <p id="nights"></p>
+                            <p id="taxAmount"></p>
+                            <p id="total-price"></p>
+                        </div>
+                    </div>   
+                </div>
+                <button class="cta">Reserver</button>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="data.js"></script>
+    <script>
+        // Récupérer l'ID depuis l'URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        // Affichage des détails de la réservation
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const reservationId = getQueryParameter('id');
+                if (reservationId) {
+                    const reservation = data.hebergements.find(h => h.id == reservationId); // trouver la réservation avec l'ID
+                    if (reservation) {
+                        displayReservation(reservation);
+                    } else {
+                        console.error('Réservation non trouvée');
+                    }
+                }
+            })
+            .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));
+    
+        // Fonction pour afficher la réservation
+        function displayReservation(reservation) {
+            // Met à jour les éléments HTML avec les informations de la réservation
+            document.getElementById('name').textContent = reservation.name; // nom de l'activité
+            document.getElementById('image').src = reservation.image; // image de l'activité
+            document.getElementById('host-name').textContent = `Hôte : ${reservation.host.name}`;
+            document.getElementById('host-experience').textContent = `Hôte depuis : ${reservation.host.experience}`;
+            document.getElementById('host-image').src = reservation.host.image;
+
+            // Récupérer et afficher les dates et le nombre de voyageurs
+            const arrivalDate = getQueryParameter('arrivee'); // Utiliser 'arrivee'
+            const departureDate = getQueryParameter('depart'); // Utiliser 'depart'
+            const totalTravelers = getQueryParameter('voyageurs');
+            const finalPrice = getQueryParameter('prix');
+            const nights = getQueryParameter('night');
+            const tax = getQueryParameter('tax');
+
+            // Affichage des dates et des voyageurs dans les éléments HTML appropriés
+            document.getElementById('arrival-date').textContent = `Date d'arrivée : ${arrivalDate}`;
+            document.getElementById('departure-date').textContent = `Date de départ : ${departureDate}`;
+            document.getElementById('total-travelers').textContent = `Nombre de voyageurs : ${totalTravelers}`;
+            document.getElementById('total-price').textContent = `Prix total : ${finalPrice}`; // Correction de l'ID
+            document.getElementById('nights').textContent = `Nombre de nuits : ${nights}`;
+            document.getElementById('taxAmount').textContent = `Taxe : ${tax}`;
+        }
+    </script>
+</body>
+</html>
