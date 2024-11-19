@@ -64,6 +64,7 @@ fetch('data.json')
 
       afficherLogements(filteredHotels);
       updateHebergementCards();
+   
 
     }
 
@@ -77,6 +78,58 @@ fetch('data.json')
       cardHebergement.classList.remove('hebergements-cards');
       cardHebergement.classList.add('hebergements-cards-filtre');
     }
+
+    document.getElementById("Economique").addEventListener("click", function() {
+      this.classList.toggle("active");
+      console.log(this.classList.contains("active") ? "Filtre économique appliqué" : "Filtre économique retiré");
+      filterResults();
+    });
+    document.getElementById("Familiale").addEventListener("click", function() {
+      this.classList.toggle("active");
+      console.log(this.classList.contains("active") ? "Filtre familiale appliqué" : "Filtre familiale retiré");
+      filterResults();
+    });
+    document.getElementById("Romantique").addEventListener("click", function() {
+      this.classList.toggle("active");
+      console.log(this.classList.contains("active") ? "Filtre romantique appliqué" : "Filtre romantique retiré");
+      filterResults();
+    });
+    document.getElementById("Pepites").addEventListener("click", function() {
+      this.classList.toggle("active");
+      console.log(this.classList.contains("active") ? "Filtre pépites appliqué" : "Filtre pépites retiré");
+      filterResults();
+    });
+
+    function filterResults () {
+      const ville = document.getElementById("ville").value.toLowerCase();
+      const nombrePersonnes = parseInt(document.getElementById("personnes").value) || 0;
+
+      const filters = {
+        economique: document.getElementById("Economique").classList.contains("active"),
+        familiale: document.getElementById("Familiale").classList.contains("active"),
+        romantique: document.getElementById("Romantique").classList.contains("active"),
+        pepites: document.getElementById("Pepites").classList.contains("active")
+      };
+
+      const filteredHotels = hebergementData.filter(hebergement => {
+          const matchVille = ville ? hebergement.city && hebergement.city.toLowerCase().includes(ville) : true;
+          const matchCapacite = nombrePersonnes > 0 ? nombrePersonnes <= hebergement.features.capacity : true;
+        
+          const matchEconomique = filters.economique ? hebergement.type.includes("Economique") : true;
+          const matchFamiliale = filters.familiale ? hebergement.type.includes("Familiale") : true;
+          const matchRomantique = filters.romantique ? hebergement.type.includes("Romantique")  : true;
+          const matchPepites = filters.pepites ? hebergement.type.includes("Pepites")  : true;
+    
+          return matchVille && matchCapacite && matchEconomique && matchFamiliale && matchRomantique && matchPepites;
+      });
+
+      console.log("Hébergements filtrés après avoir cliqué sur les filtres :", filteredHotels);
+      afficherLogements(filteredHotels);
+      updateHebergementCards();
+   
+    }
+
+  
 
     afficherLogements(hebergementData);
  
